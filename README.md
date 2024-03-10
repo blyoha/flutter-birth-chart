@@ -8,7 +8,7 @@ A simple customizable birth chart with custom data, colors and other stuff.
 ## Example
 See the [example](./example) for more details.
 <div>
-    <img src="https://github.com/blyoha/flutter-birth-chart/assets/example.gif?raw=true" alt="Example GIF" width="400" />
+    <img src="screenshots/example.gif" width="320" alt="Example GIF" >
 </div>
 
 ```dart
