@@ -1,2 +1,34 @@
-# flutter-birth-chart
-A simple birth chart Flutter widget.
+# Birth Chart Flutter widget.
+A simple customizable birth chart with custom data, colors and other stuff.
+
+![Package version](https://img.shields.io/badge/version-1.0.0-blue)
+
+---
+
+## Example
+See the [example](./example) for more details.
+<div>
+    <img src="https://github.com/blyoha/flutter-birth-chart/assets/example.gif?raw=true" alt="Example GIF" width="400" />
+</div>
+
+```dart
+BirthChart(
+  houses: List.generate(12, (_) => ChartHouse(position: 20)),
+  planets: [
+    ChartPlanet(position: 111, sign: '♈'),
+    ChartPlanet(position: 71, sign: '♓'),
+  ],
+  aspects: [
+    ChartAspect(
+      planet1: ChartPlanet(position: 111, sign: '♈'),
+      planet2: ChartPlanet(position: 71, sign: '♓'),
+      type: ChartAspectType.red,
+    ),
+  ],
+);
+```
+
+## Installation
+```sh
+$ flutter pub get birth_chart
+```

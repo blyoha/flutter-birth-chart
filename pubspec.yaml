@@ -1,0 +1,25 @@
+name: birth_chart
+description: A simple Birth Chart widget.
+version: 1.0.0
+repository: https://github.com/blyoha/flutter-birth-chart
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+screenshots:
+  - description: 'BirthChart widget example.'
+    path: screenshots/example.gif
+
+topics:
+  - chart
+  - charts
