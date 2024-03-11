@@ -2,7 +2,6 @@ import 'package:birth_chart/birth_chart.dart';
 import 'package:birth_chart/src/chart/chart_painter.dart';
 import 'package:flutter/material.dart';
 
-
 /// A widget that renders a birth chart
 ///
 /// It takes lists of [ChartHouse], [ChartSign], [ChartPlanet], and [ChartAspect] as arguments,

@@ -50,7 +50,7 @@ class ChartPlanet {
 /// Data class representing a chart aspect
 ///
 /// Contains a [planet1], [planet2], and a [type]
-/// 
+///
 /// [ChartPainter] will draw a line between the two planets.
 /// The color of the line depends on the [type]
 ///

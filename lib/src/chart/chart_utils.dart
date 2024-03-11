@@ -7,7 +7,7 @@ import 'package:birth_chart/src/extensions/double_extension.dart';
 /// This class provides methods to calculate chart positions and angles
 /// in a polar coordinate system.
 class ChartUtils {
-  /// Full circle in radians 
+  /// Full circle in radians
   static double get fullCircle => 2 * pi;
 
   /// Calculates a point in a polar coordinate system

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 /// Extension methods for [Canvas]
 extension CanvasExt on Canvas {
-
   /// Draws text within a specified rectangle using the given alignment and text painter.
   void drawTextInRect(
     Rect rect,
