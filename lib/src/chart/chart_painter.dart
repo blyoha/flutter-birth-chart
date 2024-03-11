@@ -4,6 +4,11 @@ import 'package:birth_chart/src/extensions/canvas_extension.dart';
 import 'package:birth_chart/src/extensions/double_extension.dart';
 import 'package:flutter/material.dart';
 
+/// Birth chart painter
+///
+/// [CustomPainter] that is responsible for painting a chart
+///
+/// Accepts [ChartSign]s, [ChartHouse]s, [ChartPlanet]s, [ChartAxis]s, and painting parameters
 class ChartPainter extends CustomPainter {
   ChartPainter({
     required List<ChartSign> signs,
@@ -73,12 +78,16 @@ class ChartPainter extends CustomPainter {
   late double _chartRadius;
   late Canvas _chartCanvas;
 
+  /// Gets the diameter of the chart.
   double get _chartDiameter => _chartRadius * 2;
 
+  /// The rotation angle of the houses arc in radians.
   double get _rotationAngleRad => _housesRotationAngle.toRadian();
 
+  /// The rotation angle of the signs arc in radians.
   double get _signsRotationAngleRad => _signsRotationAngle.toRadian();
 
+  /// Draws text at a specified position using the provided TextPainter object.
   void _drawText(double x, double y, TextPainter textPainter) {
     Rect rect = Rect.fromCenter(
       center: _chartCenter + Offset(x, y),
@@ -89,6 +98,9 @@ class ChartPainter extends CustomPainter {
     _chartCanvas.drawTextInRect(rect, Alignment.center, textPainter);
   }
 
+  /// Draws background of the chart body and a center circle.
+  ///
+  /// The center circle is drawn with [_centerSize] width.
   void _drawBackground() {
     Paint paint = Paint();
 
@@ -115,6 +127,9 @@ class ChartPainter extends CustomPainter {
     );
   }
 
+  /// Draws the outter arc with zodiac signs of [ChartSign] class with [_signsRowSize] width.
+  ///
+  /// Each sign section contains [_signsInnerSerifsCount] serifs.
   void _drawSigns() {
     Paint paint = Paint()
       ..color = _linesColor
@@ -195,6 +210,9 @@ class ChartPainter extends CustomPainter {
     }
   }
 
+  /// Draws the arc with houses of [ChartHouse] class.
+  ///
+  /// Amount of houses is equal to [_houses] length.
   void _drawHouses() {
     Paint linePaint = Paint()
       ..color = _linesColor
@@ -230,6 +248,7 @@ class ChartPainter extends CustomPainter {
     }
   }
 
+  /// Draws labels in sign sections.
   void _drawSignsLabel(String text, double angleRad, double distance) {
     TextStyle textStyle = TextStyle(fontSize: 16, color: _textColor);
     TextPainter textPainter = TextPainter(textDirection: TextDirection.ltr)
@@ -246,6 +265,7 @@ class ChartPainter extends CustomPainter {
     _drawText(position.x, position.y, textPainter);
   }
 
+  /// Draws label in houses sections.
   void _drawHouseIndex(
     String text,
     double angleDeg,
@@ -265,6 +285,9 @@ class ChartPainter extends CustomPainter {
     _drawText(position.x, position.y, textPainter);
   }
 
+  /// Draws aspect lines of [ChartAspect] class.
+  ///
+  /// The aspects connect two planets.
   void _drawAspectLines() {
     List<ChartAspect> aspects = _aspects ?? [];
 
@@ -304,6 +327,9 @@ class ChartPainter extends CustomPainter {
     }
   }
 
+  /// Draws planets of [ChartPlanet] class.
+  ///
+  /// Amount of planets is equal to [_planets] length.
   void _drawPlanets() {
     TextPainter textPainter = TextPainter(textDirection: TextDirection.ltr);
     TextStyle textStyle = TextStyle(fontSize: 20, color: _textColor);
@@ -324,6 +350,9 @@ class ChartPainter extends CustomPainter {
     }
   }
 
+  /// Draws axes of [ChartAxis] class.
+  ///
+  /// Amount of axes is equal to [_axes] length.
   void _drawAxes() {
     TextPainter textPainter = TextPainter(textDirection: TextDirection.ltr);
     TextStyle textStyle = TextStyle(

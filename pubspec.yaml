@@ -1,6 +1,6 @@
 name: birth_chart
-description: A simple Birth Chart widget.
-version: 1.0.0
+description: A simple customizable birth chart with custom data, colors and other stuff.
+version: 1.0.1
 repository: https://github.com/blyoha/flutter-birth-chart
 
 environment:

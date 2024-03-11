@@ -2,6 +2,14 @@ import 'package:birth_chart/birth_chart.dart';
 import 'package:birth_chart/src/chart/chart_painter.dart';
 import 'package:flutter/material.dart';
 
+
+/// A widget that renders a birth chart
+///
+/// It takes lists of [ChartHouse], [ChartSign], [ChartPlanet], and [ChartAspect] as arguments,
+/// and renders a birth chart based on these data.
+///
+/// You can customize the chart's appearance by providing [radius], [centerSize],
+/// [signsRowSize], [signsRotationAngle], and [housesRotationAngle] parameters.
 class BirthChart extends StatelessWidget {
   const BirthChart({
     required this.houses,

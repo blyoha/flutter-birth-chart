@@ -2,7 +2,10 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+/// Extension methods for [Canvas]
 extension CanvasExt on Canvas {
+
+  /// Draws text within a specified rectangle using the given alignment and text painter.
   void drawTextInRect(
     Rect rect,
     Alignment alignment,
@@ -12,6 +15,7 @@ extension CanvasExt on Canvas {
     painter.paint(this, offsetRect.topLeft);
   }
 
+  /// A function to draw a dashed line using the provided paint, two points, and an optional dash size.
   void drawDashedLine(
     Paint paint,
     Offset point1,

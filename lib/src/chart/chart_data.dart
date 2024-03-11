@@ -1,3 +1,10 @@
+/// Data class representing a chart zodiac sign
+///
+/// Contains a [sign] and an optional [name]
+///
+/// Used to represent signs in a birth chart
+///
+/// For example, in a chart of Aries, the first sign is '♈' and its name is 'Aries'
 class ChartSign {
   ChartSign({
     required this.sign,
@@ -8,6 +15,11 @@ class ChartSign {
   final String? name;
 }
 
+/// Data class representing a chart house
+///
+/// Contains a [position] and an optional [name]
+///
+/// Used to represent houses in a birth chart
 class ChartHouse {
   ChartHouse({
     required this.position,
@@ -18,6 +30,11 @@ class ChartHouse {
   final String? name;
 }
 
+/// Data class representing a chart planet
+///
+/// Contains a [position] and an optional [name]
+///
+/// Used to represent planets in a birth chart
 class ChartPlanet {
   ChartPlanet({
     required this.position,
@@ -30,6 +47,14 @@ class ChartPlanet {
   final String? name;
 }
 
+/// Data class representing a chart aspect
+///
+/// Contains a [planet1], [planet2], and a [type]
+/// 
+/// [ChartPainter] will draw a line between the two planets.
+/// The color of the line depends on the [type]
+///
+/// Used to represent aspects in a birth chart
 class ChartAspect {
   ChartAspect({
     required this.planet1,
@@ -42,6 +67,11 @@ class ChartAspect {
   final ChartAspectType type;
 }
 
+/// Data class representing a chart axis
+///
+/// Contains a [type] and a [position]
+///
+/// Used to represent axes in a birth chart
 class ChartAxis {
   ChartAxis({
     required this.type,
@@ -52,6 +82,9 @@ class ChartAxis {
   final double position;
 }
 
+/// Enum representing the type of a chart axis
+///
+/// Can be 'asc' (ascendant), 'dcs' (descendant), 'mc' (midheaven), or 'ic' (innermost house cusp)
 enum ChartAxisType {
   asc,
   dcs,
@@ -73,4 +106,7 @@ enum ChartAxisType {
   }
 }
 
+/// Enum representing the type of an aspect
+///
+/// Can be 'green' or 'red'
 enum ChartAspectType { green, red }
