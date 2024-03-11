@@ -1,7 +1,7 @@
 # Birth Chart Flutter widget.
 A simple customizable birth chart with custom data, colors and other stuff.
 
-![Package version](https://img.shields.io/badge/version-1.0.1-blue)
+![Package version](https://img.shields.io/badge/version-1.0.2-blue)
 
 ---
 
